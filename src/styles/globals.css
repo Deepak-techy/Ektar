@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+}
+
+.columns > * {
+  flex-grow: 1;
+}
+
+/* MVP.css v1.8 - https://github.com/andybrewer/mvp */
+
+:root {
+  --active-brightness: 0.85;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 4px;
+  --color: #118bee;
+  --color-accent: #118bee15;
+  --color-bg: #fff;
+  --color-bg-secondary: #e9e9e9;
+  --color-link: #118bee;
+  --color-secondary: #920de9;
+  --color-secondary-accent: #920de90b;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-table: #118bee;
+  --color-text: #000;
+  --color-text-secondary: #999;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --hover-brightness: 1.2;
+  --justify-important: center;
+  --justify-normal: left;
+  --line-height: 1.5;
+  --width-card: 285px;
+  --width-card-medium: 460px;
+  --width-card-wide: 800px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: #0097fc;
+    --color-accent: #0097fc4f;
+    --color-bg: #333;
+    --color-bg-secondary: #555;
+    --color-link: #0097fc;
+    --color-secondary: #e20de9;
+    --color-secondary-accent: #e20de94f;
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --color-table: #0097fc;
+    --color-text: #f7f7f7;
+    --color-text-secondary: #aaa;
+  }
+}
+
+:root {
+  --color-interactive: #ff9800;
+  --color-interactive-hover: #ffb74d;
+  --color-interactive-active: #f57c00;
+  --color-interactive-bg: #fff3e0;
+  --color-interactive-shadow: rgba(255, 152, 0, 0.3);
+  --transition-time: 0.3s;
+}
+
+/* Interactive Elements */
+button,
+a {
+  transition: background-color var(--transition-time),
+    box-shadow var(--transition-time);
+}
+
+button,
+a b,
+a strong {
+  background-color: var(--color-interactive);
+  color: #fff;
+  box-shadow: 0 2px 8px var(--color-interactive-shadow);
+}
+
+button:hover,
+a:hover {
+  background-color: var(--color-interactive-hover);
+}
+
+button:active,
+a:active {
+  background-color: var(--color-interactive-active);
+}
+
+button,
+a b,
+a strong {
+  border: 2px solid var(--color-interactive);
+}
+
+a em,
+a i {
+  border: 2px solid var(--color-interactive);
+  color: var(--color-interactive);
+}
+
+a em:hover,
+a i:hover {
+  background-color: var(--color-interactive-bg);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-interactive);
+  box-shadow: 0 0 5px var(--color-interactive-shadow);
+}
+
+/* Interactive Callout */
+article aside {
+  background: var(--color-interactive-bg);
+  border-left: 4px solid var(--color-interactive);
+}
